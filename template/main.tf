@@ -7,13 +7,10 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = "crossplane-rg"
-    storage_account_name = "crossplaneblob125"
+    resource_group_name  = "rg-demo-cil"
+    storage_account_name = "cildemostatebackend"
     container_name       = "terraform"
     key                  = "dev.terraform.tfstate"
-    #use_msi              = true
-    #subscription_id      = "181821eb-6bc1-41fa-bba6-5bfecf56c48f"
-    #tenant_id            = "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
   }
 }
 
